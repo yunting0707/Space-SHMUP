@@ -21,9 +21,10 @@ public class Main : MonoBehaviour {
         bndCheck = GetComponent<BoundsCheck>();
 
         Invoke("SpawnEnemy", 1f / enemySpawnPerSecond);
+
         WEAP_DICT = new Dictionary<WeaponType, WeaponDefinition>();         // a 
         foreach (WeaponDefinition def in weaponDefinitions)
-        {              // b 
+        {              
             WEAP_DICT[def.type] = def;
         }
     }
